@@ -3,6 +3,7 @@ import Product from './components/Product/Product';
 import HookCounter from './components/HookCounter';
 import ClassCounter from './components/ClassCounter';
 import HookObject from './components/HookObject';
+import HookArray from './components/HookArray';
 
 
 const App = () => {
@@ -10,7 +11,8 @@ const App = () => {
         <div>
         {/* <HookCounter /> */}
         {/* <ClassCounter /> */}
-        <HookObject />
+        {/* <HookObject /> */}
+        <HookArray />
     </div>
     )
     
