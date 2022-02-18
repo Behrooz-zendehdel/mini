@@ -43,10 +43,10 @@ class App extends Component {
                       {/* <HookCounter /> */}
                         <h1>shopping</h1>
                         {this.state.products.map((product,index) => {
-                            return <Product name={product.title} price={product.price} key={product.id} />
+                            return <Product name={product.title} price={product.price} key={index} click={this.clickHandler}/>
                         })}
-                        <button onClick={this.countHandler}>
-                            counter{this.state.count} 
+                        <button onClick={()=>this.countHandler(2)}> 
+                            counter :{this.state.count} 
                             
                         </button>
               </div>
