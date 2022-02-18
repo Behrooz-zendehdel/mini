@@ -1,20 +1,25 @@
 import { useState } from "react";
 
 const HookObject = () => {
-    const [user,setUser]=useState({firstName:"",lastName:""})
+    const [user, setUser] = useState({ firstName: "", lastName: "" })
 
 
-    const changeHandler =(e)=>{
-setUser({firstName:e.target.value})
+    const changeHandler = (e) => {
+        setUser({ firstName: e.target.value })
     }
-    return ( 
-<form>
-    <input type="text" value={user.firstName} onChange={changeHandler} />
-    <h2>my name is -{user.firstName}</h2>
-    <h2>my lastName is -{user.lastName}</h2>
+    const changeLastNameHandler = (e) => {
+        setUser({ lastName: e.target.value })
+    }
 
-</form>
-     );
+    return (
+        <form>
+            <h2>my name is -{user.firstName}</h2>
+            <input type="text" value={user.firstName} onChange={changeHandler} />
+            <h2>my lastName is -{user.lastName}</h2>
+            <input type="text" value={user.lastName} onChange={changeLastNameHandler} />
+
+        </form>
+    );
 }
- 
+
 export default HookObject;
