@@ -2,13 +2,15 @@ import React, { useState } from 'react';
 import Product from './components/Product/Product';
 import HookCounter from './components/HookCounter';
 import ClassCounter from './components/ClassCounter';
+import HookObject from './components/HookObject';
 
 
 const App = () => {
     return(
         <div>
         {/* <HookCounter /> */}
-        <ClassCounter />
+        {/* <ClassCounter /> */}
+        <HookObject />
     </div>
     )
     
