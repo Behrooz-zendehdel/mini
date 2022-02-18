@@ -19,30 +19,21 @@ class App extends Component {
          this.setState({count : this.state.count + 1})
      }
 
-     clickHandler =()=>{
-     this.setState({
-     products:  [{ title: "react.js", price: "79$",id:1 },
-     { title: "node.js", price: "69$",id:2 },
-     { title: "javascript", price: "59$" ,id:3},
-],
-}) ; 
-            
+       
      
-};
 
-    render(){ 
+
+    render(){
         return(
-                  <div   className="container" id="title">
-                        <h1>shopping</h1>
+                  <div className="container" id="title">
+                        <h1>shopping app</h1>
                     <ProductList />
                     
-                        <button onClick={()=>this.countHandler({id:2})}> 
-                            counter :{this.state.count} 
-                            
-                        </button>
+                       
               </div>
               )}
-    }
+        
+            };
 
 export default App;
 
