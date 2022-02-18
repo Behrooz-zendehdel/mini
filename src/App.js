@@ -1,4 +1,4 @@
-import React, { Component,useState } from 'react';
+import React, { useState } from 'react';
 import Product from './components/Product/Product';
 
 
@@ -11,7 +11,11 @@ const App = () => {
                 ]);
 
                 const clickHandler =()=>{
-
+                    setProducts([
+                        { title: "react.js", price: "79$" },
+                        { title: "node.js", price: "69$" },
+                        { title: "javascript", price: "59$" }
+                    ])
                 }
 
     return (
