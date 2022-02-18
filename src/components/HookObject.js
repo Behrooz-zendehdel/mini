@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const HookObject = () => {
-    const [user,setUser]=useState({firstName:"",lastName:""})
+    const [userData,setUserData]=useState({firstName:"",lastName:""})
 
 
     const changeHandler =()=>{
