@@ -2,13 +2,15 @@ import { useState } from "react";
 
 const HookObject = () => {
     const [user, setUser] = useState({ firstName: "", lastName: "" })
-
+    // dar sorati k state object bod bayad az setUser yek clone begiri ta az pak shodane 
+    // data jologiri beshe.
 
     const changeHandler = (e) => {
-        setUser({ firstName: e.target.value })
+        setUser({ ...user, firstName: e.target.value })
+        //clone
     }
     const changeLastNameHandler = (e) => {
-        setUser({ lastName: e.target.value })
+        setUser({ ...user, lastName: e.target.value })
     }
 
     return (
