@@ -19,6 +19,10 @@ class App extends Component {
         userDate:"behrooz",
      } ;
 
+     countHandler =()=>{
+         this.setState({count : this.state.count +1})
+     }
+
      clickHandler =()=>{
      this.setState({
      products:  [{ title: "react.js", price: "79$",id:1 },
@@ -41,7 +45,7 @@ class App extends Component {
                         {this.state.products.map((product) => {
                             return <Product name={product.title} price={product.price} key={product.id} />
                         })}
-                        <button onClick={this.clickHandler}>change price</button>
+                        <button onClick={this.countHandler}>counter</button>
               </div>
               )}
     }
