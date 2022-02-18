@@ -13,8 +13,14 @@ class App extends Component {
         ],
     };
 
-    clickHandler() {
-    console.log("clicked")
+    clickHandler =()=> {
+        this.setState({
+                products:[
+                    { title: "react.js", price: "79$" },
+                    { title: "node.js", price: "69$" },
+                    { title: "javascript", price: "59$" },
+                ],
+        })
     }
 
     render() {
