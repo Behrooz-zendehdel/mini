@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
-import Product from './component/Product/Product';
-//component:
+import Product from './components/Product/Product';
 
 
 
-// class component App 
 class App extends Component {
 
-    //add state to class cm
     state = {
         products: [
             { title: "react.js", price: "99$" },
@@ -15,16 +12,21 @@ class App extends Component {
             { title: "javascript", price: "79$" }
         ],
     };
+
+    clickHandler() {
+    console.log("clicked")
+    }
+
     render() {
         return (
-            <div className='container' id='title'>
+            <div className="container" id="title">
                 <h1>shopping</h1>
-                {this.state.products((Product) => {
-                    return <Product name={Product.title} price={Product.price} />
+                {this.state.products.map((product) => {
+                    return <Product name={product.title} price={product.price} />
                 })}
-
+                <button onClick={this.clickHandler}>change price</button>
             </div >
-        )
+        );
     }
 }
 export default App
