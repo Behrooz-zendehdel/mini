@@ -7,4 +7,28 @@
   justify-content: space-around;
   width: 40rem;
   margin-top: 20px;
+  color: #444;
+}
+.button {
+  color: #9333ea;
+  background-color: #fff;
+  border: 1px solid #9333ea;
+  border-radius: 5px;
+  padding: 5px 10px;
+  outline: none;
+}
+.inc {
+  background-color: #94a3b8;
+}
+.value {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #ede6fe;
+  color: #9333ea;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
