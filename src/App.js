@@ -1,21 +1,17 @@
 import React, { useState } from 'react';
-import Product from './components/Product/Product';
 import HookCounter from './components/HookCounter';
 import ClassCounter from './components/ClassCounter';
 import HookObject from './components/HookObject';
 import HookArray from './components/HookArray';
 import  { Component } from 'react';
 import './App.css'
+import ProductList from './components/ProductList/ProductList';
 
 
 
 class App extends Component {
     state = { 
-      products:[
-            { title: "react.js", price: "99$",id:1 },
-            { title: "node.js", price: "89$",id:2 },
-            { title: "javascript", price: "79$" ,id:3},
-            ],
+    
         count:0,
      } ;
 
@@ -37,15 +33,10 @@ class App extends Component {
     render(){ 
         return(
                   <div   className="container" id="title">
-                      {/* <ClassCounter /> */}
-                      {/* <HookObject /> */}
-                       {/* <HookArray /> */}
-                      {/* <HookCounter /> */}
                         <h1>shopping</h1>
-                        {this.state.products.map((product,index) => {
-                            return <Product name={product.title} price={product.price} key={index} click={this.clickHandler}/>
-                        })}
-                        <button onClick={()=>this.countHandler(2)}> 
+                    <ProductList />
+                       
+                        <button onClick={()=>this.countHandler({id:2})}> 
                             counter :{this.state.count} 
                             
                         </button>
