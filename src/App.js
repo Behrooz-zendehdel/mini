@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import Product from './components/Product/Product';
 import HookCounter from './components/HookCounter';
+import ClassCounter from './components/ClassCounter';
 
 
 const App = () => {
     return(
         <div>
-        <HookCounter />
+        {/* <HookCounter /> */}
+        <ClassCounter />
     </div>
     )
     
