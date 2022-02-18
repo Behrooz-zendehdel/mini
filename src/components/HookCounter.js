@@ -4,15 +4,15 @@ const HookCounter = () => {
     const [count, setCount] = useState(0);
 
     const addOneHandler = () => {
-        setCount(count + 1);
+        setCount((prev) => prev + 1);
     }
     const addTowHandler = () => {
-        setCount(count + 2);
+        setCount((prev) => prev + 2);
     }
     const addFiveHandler = () => {
         // setCount(count+5);
         for (let i = 0; i < 5; i++) {
-            setCount(prev => prev + 1)
+            setCount((prev) => prev + 1)
             // update state based on prev state => callback function!!!
         }
     }
