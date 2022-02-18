@@ -6,7 +6,9 @@ class ClassCounter extends Component {
     };
 
     addOneHandler = () => {
-        this.setState({ count: this.state.count + 1 });
+        this.setState((prevState) => {
+            return { count: prevState.count + 1 }
+        });
     }
 
     render() {
