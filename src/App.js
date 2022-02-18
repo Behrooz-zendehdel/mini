@@ -6,9 +6,11 @@ const App = () => {
         //jsx
         <div className='container' id='title'>
             <h1>shopping</h1>
-            <Product name='react.js' price='99$' /> 
+            <Product name='react.js' price='99$' />
             <Product name='node.js' price='89$' />
-            <Product name='java script' price='79$' />
+            <Product name='javascript' price='79$'>
+               <p>discount 15%</p>
+            </Product>
         </div>
     )
 };
