@@ -16,11 +16,11 @@ class App extends Component {
             { title: "node.js", price: "89$",id:2 },
             { title: "javascript", price: "79$" ,id:3},
             ],
-        userDate:"behrooz",
+        count:0,
      } ;
 
      countHandler =()=>{
-         this.setState({count : this.state.count +1})
+         this.setState({count : this.state.count + 1})
      }
 
      clickHandler =()=>{
@@ -42,10 +42,13 @@ class App extends Component {
                        {/* <HookArray /> */}
                       {/* <HookCounter /> */}
                         <h1>shopping</h1>
-                        {this.state.products.map((product) => {
+                        {this.state.products.map((product,index) => {
                             return <Product name={product.title} price={product.price} key={product.id} />
                         })}
-                        <button onClick={this.countHandler}>counter</button>
+                        <button onClick={this.countHandler}>
+                            counter{this.state.count} 
+                            
+                        </button>
               </div>
               )}
     }
