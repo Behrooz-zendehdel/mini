@@ -7,16 +7,37 @@ import HookArray from './components/HookArray';
 
 
 const App = () => {
+    const [products,setProducts]=  useState([
+                        { title: "react.js", price: "99$" },
+                        { title: "node.js", price: "89$" },
+                        { title: "javascript", price: "79$" }
+                    ])
+                    const clickHandler =()=>{
+                        setProducts([
+                            { title: "react.js", price: "79$" },
+                            { title: "node.js", price: "69$" },
+                            { title: "javascript", price: "59$" }
+                        ])
+                    }
+
     return(
-        <div>
-        {/* <HookCounter /> */}
-        {/* <ClassCounter /> */}
-        {/* <HookObject /> */}
-        <HookArray />
-    </div>
-    )
-    
-};
+        
+     
+
+
+        <div   className="container" id="title">
+                {/* <ClassCounter /> */}
+                {/* <HookObject /> */}
+                 {/* <HookArray /> */}
+                {/* <HookCounter /> */}
+                  <h1>shopping</h1>
+                  {products.map((product) => {
+                      return <Product name={product.title} price={product.price} />
+                  })}
+                  <button onClick={clickHandler}>change price</button>
+        </div>
+        )}
+        
 
 export default App;
 
@@ -45,6 +66,8 @@ export default App;
 //             })}
 //             <button onClick={clickHandler}>change price</button>
 //         </div > );
+// export default App;
+
       
 
 
