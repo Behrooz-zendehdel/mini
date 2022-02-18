@@ -11,16 +11,16 @@ import  { Component } from 'react';
 class App extends Component {
     state = { 
       products:[
-                                { title: "react.js", price: "99$",id:1 },
-                                { title: "node.js", price: "89$",id:2 },
-                                { title: "javascript", price: "79$" ,id:3},
-                            ],
-                            userDate:"behrooz",
+            { title: "react.js", price: "99$",id:1 },
+            { title: "node.js", price: "89$",id:2 },
+            { title: "javascript", price: "79$" ,id:3},
+            ],
+        userDate:"behrooz",
      } ;
 
      clickHandler =()=>{
      this.setState({
-        products:  [{ title: "react.js", price: "79$",id:1 },
+     products:  [{ title: "react.js", price: "79$",id:1 },
      { title: "node.js", price: "69$",id:2 },
      { title: "javascript", price: "59$" ,id:3},
 ],
@@ -31,11 +31,7 @@ class App extends Component {
 
     render(){ 
         return(
-        
-     
-
-
-              <div   className="container" id="title">
+                  <div   className="container" id="title">
                       {/* <ClassCounter /> */}
                       {/* <HookObject /> */}
                        {/* <HookArray /> */}
@@ -49,8 +45,11 @@ class App extends Component {
               )}
     }
 
- 
 export default App;
+
+
+
+
 
 
 
