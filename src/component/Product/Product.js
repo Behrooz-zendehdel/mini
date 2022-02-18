@@ -1,8 +1,14 @@
-const Product = () => {
-    return ( 
-        <p>product #1 book :1</p>
+const Product = (props) => {
+    console.log(props)
+    return (
+        <div>
+            <p>product name : {props.name} course</p>
+            <p>product price : {props.price}</p>
+             
 
-     );
+        </div>
+
+    );
 }
- 
+
 export default Product;
