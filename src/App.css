@@ -6,3 +6,10 @@
   align-items: center;
   height: 100vh;
 }
+
+@media screen and (max-width: 668px) {
+  .container {
+    display: flex;
+    align-content: flex-start;
+  }
+}
