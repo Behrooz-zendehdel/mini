@@ -27,9 +27,14 @@ class ProductList extends Component {
     }
     decrementHandler = (id) => {
         const products = [...this.state.products]
-        const selectedItem = this.state.products.find((p) => p.id === id);
-        selectedItem.quantity--; // muted state !
-        this.setState({ products })
+        const decrementItem = this.state.products.find((p) => p.id === id);
+        if(decrementItem.quantity === 1){
+            const filteredProduct = products.filter((p) => p.id !== id);       
+            this.setState({products :filteredProduct})
+        }else{
+            decrementItem.quantity--; // muted state !
+            this.setState({ products })
+        }
     }
     render() {
         return (
