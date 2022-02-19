@@ -55,7 +55,7 @@ class ProductList extends Component {
                     quantity={this.state.quantity}
                     onIncrement={() => this.incrementHandler(product.id)}
                     onDecrement={() => this.decrementHandler(product.id)}
-                    onChange={()=>this.changeHandler(product.id)}
+                    onChange={(e)=>this.changeHandler(e,product.id)}
                 />
            
             });
