@@ -12,6 +12,11 @@ class ProductList extends Component {
     }
 
     // state => handler ! ghanone 3 angoshti ta betonim b state access dashte bashim
+    // changeHandler =(e)=>{
+    //     this.state.products.indexOf((e)=>this.setState(e.target.value))
+    // }
+
+
 
     removeHandler = (id) => {
         console.log('clicked', id)
@@ -28,30 +33,45 @@ class ProductList extends Component {
     decrementHandler = (id) => {
         const products = [...this.state.products]
         const decrementItem = this.state.products.find((p) => p.id === id);
-        if(decrementItem.quantity === 1){
-            const filteredProduct = products.filter((p) => p.id !== id);       
-            this.setState({products :filteredProduct})
-        }else{
+        if (decrementItem.quantity === 1) {
+            const filteredProduct = products.filter((p) => p.id !== id);
+            this.setState({ products: filteredProduct })
+        } else {
             decrementItem.quantity--; // muted state !
             this.setState({ products })
         }
     }
+
+    renderProduct = ()=> {
+        if (this.state.products.length === 0)
+            return <div>there is no product in cart</div>
+
+        return  this.state.products.map((product, index) => {
+                return <Product
+                    
+                    product={product}
+                    key={index}
+                    onDelete={() => this.removeHandler(product.id)}
+                    quantity={this.state.quantity}
+                    onIncrement={() => this.incrementHandler(product.id)}
+                    onDecrement={() => this.decrementHandler(product.id)}
+                    onChange={()=>this.changeHandler(product.id)}
+                />
+           
+            });
+        }  ;
+        
+
+
+
+
+
     render() {
+
         return (
             <div>
-                {this.state.products.map((product, index) => {
-                    return <Product
-                        // name={product.title}
-                        // price={product.price}
-                        // click={this.clickHandler}
-                        product={product}
-                        key={index}
-                        onDelete={() => this.removeHandler(product.id)}
-                        quantity={this.state.quantity}
-                        onIncrement={() => this.incrementHandler(product.id)}
-                        onDecrement={() => this.decrementHandler(product.id)}
-                    />
-                })}
+                {!this.state.products.length && (<div>there is no product in cart</div>) }
+                    {this.renderProduct()}
             </div>
         );
     }
