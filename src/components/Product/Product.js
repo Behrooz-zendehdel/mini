@@ -10,7 +10,7 @@ const Product = (props) => {
             <span className={styles.value}>{props.product.quantity}</span>
             <input type='text' className={styles.button} onChange={props.onChange} />
             <button className={`${styles.button} ${styles.inc}`} onClick={props.onIncrement}><BiPlusCircle /></button>
-            <button className={`${styles.button} ${styles.inc}`} onClick={props.onDecrement}>{props.product.quantity > 1 ? "-" : <BiTrash color='red' />}</button>
+            <button className={`${styles.button} ${props.product.quantity === 1 && styles.remove}`} onClick={props.onDecrement}>{props.product.quantity > 1 ? "-" : <BiTrash />}</button>
 
             <button className={styles.button} onClick={props.onDelete} >delete</button>
         </div>

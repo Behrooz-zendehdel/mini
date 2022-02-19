@@ -44,8 +44,8 @@ class ProductList extends Component {
     }
 
     renderProduct = ()=> {
-        if (this.state.products.length === 0)
-            return <div>there is no product in cart</div>
+        // if (this.state.products.length === 0)
+        //     return <div>there is no product in cart</div>
 
         return  this.state.products.map((product, index) => {
                 return <Product
