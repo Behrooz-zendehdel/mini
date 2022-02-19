@@ -1,0 +1,24 @@
+.Navbar {
+  width: 100%;
+  background: #efefef;
+  padding-top: 5px;
+  height: 60px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.Navbar span {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: #ede6fe;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-left: 20px;
+  color: rebeccapurple;
+}

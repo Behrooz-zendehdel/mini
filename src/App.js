@@ -6,7 +6,7 @@ import HookArray from './components/HookArray';
 import  { Component } from 'react';
 import './App.css'
 import ProductList from './components/ProductList/ProductList';
-
+import Navbar from './components/Navbar/Navbar';
 
 
 class App extends Component {
@@ -26,9 +26,8 @@ class App extends Component {
     render(){
         return(
                   <div className="container" id="title">
-                        <h1>shopping app</h1>
+                     <Navbar />
                     <ProductList />
-                    
                        
               </div>
               )}
