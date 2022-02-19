@@ -1,18 +1,37 @@
+import React from 'react';
 import styles from './Product.module.css'
-import { BiTrash, BiPlusCircle } from "react-icons/bi";
+
+import { BiTrash } from "react-icons/bi";
 
 const Product = (props) => {
 
     return (
-        <div className={styles.product} onClick={props.click}>
+        <div className={styles.product} >
+            {/* onClick={props.click} */}
+
             <p>product name : {props.product.name} course</p>
             <p>product price : {props.product.price}</p>
-            <span className={styles.value}>{props.product.quantity}</span>
-            <input type='text' className={styles.button} onChange={props.onChange} />
-            <button className={`${styles.button} ${styles.inc}`} onClick={props.onIncrement}><BiPlusCircle /></button>
-            <button className={`${styles.button} ${props.product.quantity === 1 && styles.remove}`} onClick={props.onDecrement}>{props.product.quantity > 1 ? "-" : <BiTrash />}</button>
 
-            <button className={styles.button} onClick={props.onDelete} >delete</button>
+            <span className={styles.value}>{props.product.quantity}</span>
+            <input
+                className={styles.input}
+                type='text'
+                onChange={props.onChange}
+                value={props.product.title}
+            />
+
+            <button onClick={props.onDecrement} className={`${styles.button} ${props.product.quantity === 1 && styles.remove}`}>
+
+                {props.product.quantity > 1 ? "-" : <BiTrash />}
+            </button>
+            <button
+                onClick={props.onIncrement} className={`${styles.inc} ${styles.button}`} >
+                +
+            </button>
+
+            <button onClick={props.onDelete} className={styles.button}  >
+                delete
+            </button>
         </div>
 
     );

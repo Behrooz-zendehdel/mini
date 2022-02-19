@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Product from '../Product/Product';
 
 
-
 class ProductList extends Component {
     state = {
         products: [
@@ -12,11 +11,7 @@ class ProductList extends Component {
         ],
     }
 
-    // state => handler ! ghanone 3 angoshti ta betonim b state access dashte bashim
-    // changeHandler =(e)=>{
-    //     this.state.products.indexOf((e)=>this.setState(e.target.value))
-    // }
-
+  
 
 
     removeHandler = (id) => {
@@ -44,8 +39,8 @@ class ProductList extends Component {
     }
 
     renderProduct = ()=> {
-        // if (this.state.products.length === 0)
-        //     return <div>there is no product in cart</div>
+        if (this.state.products.length === 0)
+            return <div>there is no product in cart</div>
 
         return  this.state.products.map((product, index) => {
                 return <Product
@@ -56,7 +51,6 @@ class ProductList extends Component {
                     quantity={this.state.quantity}
                     onIncrement={() => this.incrementHandler(product.id)}
                     onDecrement={() => this.decrementHandler(product.id)}
-                    onChange={(e)=>this.changeHandler(e,product.id)}
                 />
            
             });

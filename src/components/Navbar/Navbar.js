@@ -1,11 +1,12 @@
 import styles from './Navbar.module.css';
+import React from 'react';
+
 const Navbar = (props) => {
-    return (
-        <header className={styles.Navbar}>
+    return <header className={styles.navbar}>
             <h2>Front End shopping</h2>
-            <span>0</span>
+            <span></span>
         </header>
-    );
+   
 }
 
 export default Navbar;
