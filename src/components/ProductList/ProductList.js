@@ -19,11 +19,17 @@ class ProductList extends Component {
         this.setState({ products: filteredProduct })
     }
     incrementHandler = (id) => {
-        console.log('increment',id)
-        const products =[...this.state.products]
-        const selectedItem = this.state.products.find((p)=> p.id === id);
+        console.log('increment', id)
+        const products = [...this.state.products]
+        const selectedItem = this.state.products.find((p) => p.id === id);
         selectedItem.quantity++; // muted state !
-        this.setState({products} )
+        this.setState({ products })
+    }
+    decrementHandler = (id) => {
+        const products = [...this.state.products]
+        const selectedItem = this.state.products.find((p) => p.id === id);
+        selectedItem.quantity--; // muted state !
+        this.setState({ products })
     }
     render() {
         return (
@@ -38,6 +44,7 @@ class ProductList extends Component {
                         onDelete={() => this.removeHandler(product.id)}
                         quantity={this.state.quantity}
                         onIncrement={() => this.incrementHandler(product.id)}
+                        onDecrement={() => this.decrementHandler(product.id)}
                     />
                 })}
             </div>
