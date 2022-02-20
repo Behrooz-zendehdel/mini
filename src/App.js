@@ -62,29 +62,18 @@ class App extends Component {
 
     }
 
-    componentDidMount() {
-        console.log('app.js componentDidMount')
-
-    }
-    componentDidUpdate(prevProps, prevState) {
-        console.log('app.js componentDidUpdate')
-        console.log('app .js', prevState)
-    }
-    shouldComponentUpdate(nextProps, nextState) {
-        return true
-    }
-
+  
 
     render() {
-        console.log('app.js render')
+        // console.log('app.js render')
         return (
             <div className="container" id="title">
-                <Navbar totalItems={this.state.products.filter((p) => p.quantity > 0).length} />
+                {/* <Navbar totalItems={this.state.products.filter((p) => p.quantity > 0).length} />
                 <ProductList products={this.state.products}
                     onRemove={this.removeHandler}
                     onIncrement={this.incrementHandler}
                     onDecrement={this.decrementHandler}
-                />
+                /> */}
 
             </div>
         )

@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './Product.module.css'
 
 import { BiTrash } from "react-icons/bi";
 
 const Product = ({ onDelete, onIncrement, onDecrement, onChange, product }) => {
     console.log('product.js render')
+    // cdm +cdu+cwum => useEffect !
 
+    useEffect(()=>{
+        console.log("product.js useEffect")
+    },[]);
     return (
         <div className={styles.product} >
             {/* onClick={click} */}

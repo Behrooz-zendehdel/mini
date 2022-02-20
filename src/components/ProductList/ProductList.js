@@ -5,11 +5,6 @@ import Product from '../Product/Product';
 class ProductList extends Component {
   
   
-componentDidUpdate(prevProps, prevState) {
-    if(prevProps.products !== this.props.products){
-        // some AJAX call => and get new data
-    }
-}
 
 
 
