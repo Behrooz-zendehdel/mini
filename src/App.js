@@ -16,6 +16,7 @@ class App extends Component {
             { title: "node.js", price: "89$", id: 2, quantity: 2 },
             { title: "javascript", price: "79$", id: 3, quantity: 3 },
         ],
+       
     }
 
 
@@ -25,11 +26,18 @@ class App extends Component {
         this.setState({ products: filteredProduct })
     }
     incrementHandler = (id) => {
-        console.log('increment', id)
-        const products = [...this.state.products]
-        const selectedItem = this.state.products.find((p) => p.id === id);
-        selectedItem.quantity++; // muted state !
-        this.setState({ products })
+        const index =this.state.products.findIndex((item)=> item.id ===id);
+        console.log(index)
+        const product = {...this.state.products[index]}
+        product.quantity++
+        const products=[...this.state.products];
+        products[index]=product;
+this.setState({products})
+        // console.log('increment', id)
+        // const products = [...this.state.products]
+        // const selectedItem = this.state.products.find((p) => p.id === id);
+        // selectedItem.quantity++; // muted state !
+        // this.setState({ products })
     }
     decrementHandler = (id) => {
         const products = [...this.state.products]
@@ -47,6 +55,13 @@ class App extends Component {
     componentDidMount() {
         console.log('app.js componentDidMount')
         
+    }
+    componentDidUpdate(prevProps, prevState) {
+        console.log('app.js componentDidUpdate')
+        console.log('app .js',prevState)
+    }
+    shouldComponentUpdate(nextProps, nextState) {
+        return true
     }
 
 
