@@ -16,9 +16,17 @@ class App extends Component {
             { title: "node.js", price: "89$", id: 2, quantity: 2 },
             { title: "javascript", price: "79$", id: 3, quantity: 3 },
         ],
-       
+
     }
 
+    changeHandler =(e,id)=>{
+        const index = this.state.products.findIndex((item) => item.id === id);
+        const product = { ...this.state.products[index] }
+        product.title = e.target.value;
+        const products = [...this.state.products];
+        products[index] = product;
+        this.setState({ products })
+    }
 
     removeHandler = (id) => {
         console.log('clicked', id)
@@ -26,39 +34,41 @@ class App extends Component {
         this.setState({ products: filteredProduct })
     }
     incrementHandler = (id) => {
-        const index =this.state.products.findIndex((item)=> item.id ===id);
+        const index = this.state.products.findIndex((item) => item.id === id);
         console.log(index)
-        const product = {...this.state.products[index]}
+        const product = { ...this.state.products[index] }
         product.quantity++
-        const products=[...this.state.products];
-        products[index]=product;
-this.setState({products})
-        // console.log('increment', id)
-        // const products = [...this.state.products]
-        // const selectedItem = this.state.products.find((p) => p.id === id);
-        // selectedItem.quantity++; // muted state !
-        // this.setState({ products })
+        const products = [...this.state.products];
+        products[index] = product;
+        this.setState({ products })
+
     }
     decrementHandler = (id) => {
-        const products = [...this.state.products]
-        const decrementItem = this.state.products.find((p) => p.id === id);
-        if (decrementItem.quantity === 1) {
-            const filteredProduct = products.filter((p) => p.id !== id);
-            this.setState({ products: filteredProduct })
-        } else {
-            decrementItem.quantity--; // muted state !
+        const index = this.state.products.findIndex((item) => item.id === id);
+        const product = { ...this.state.products[index] }
+        if(product.quantity ===1){
+            const filteredProducts = this.state.products.filter((p) => p.id !== id);
+            this.setState({products:filteredProducts})
+        }else{
+            const products = [...this.state.products];
+            product.quantity--;
+
+            products[index] = product;
             this.setState({ products })
         }
-    }
 
+
+       
+
+    }
 
     componentDidMount() {
         console.log('app.js componentDidMount')
-        
+
     }
     componentDidUpdate(prevProps, prevState) {
         console.log('app.js componentDidUpdate')
-        console.log('app .js',prevState)
+        console.log('app .js', prevState)
     }
     shouldComponentUpdate(nextProps, nextState) {
         return true
