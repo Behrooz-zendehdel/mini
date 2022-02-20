@@ -34,6 +34,7 @@ class ProductList extends Component {
 
 
     render() {
+        console.log('productlist.js render')
 
         return (
             <div>
