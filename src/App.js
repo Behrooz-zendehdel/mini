@@ -3,6 +3,7 @@ import { Component } from 'react';
 import './App.css'
 import ClassTimer from './components/ClassTimer';
 import FunctionalCounter from './components/FunctionalCounter';
+import FunctionalTimer from './components/FunctionalTimer';
 // import ProductList from './components/ProductList/ProductList';
 // import Navbar from './components/Navbar/Navbar';
 // import ClassCounter from './components/ClassCounter';
@@ -76,7 +77,7 @@ class App extends Component {
                 {this.state.isShow ? 'hide' : 'show'}
                 </button>
                
-                {this.state.isShow ? <ClassTimer /> :null}
+                {this.state.isShow ? <FunctionalTimer /> :null}
                 {/* <FunctionalCounter /> */}
 
                 {/* <ClassCounter /> */}
