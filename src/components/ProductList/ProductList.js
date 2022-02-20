@@ -9,7 +9,7 @@ class ProductList extends Component {
 
 
     renderProduct = ()=> {
-        const {onRemove,onIncrement,onDecrement,products}=this.props; //destrucering
+        const {onRemove,onIncrement,onDecrement,products}=this.props; 
         if (this.props.products.length === 0)
             return <div>there is no product in cart</div>
 
@@ -33,7 +33,7 @@ class ProductList extends Component {
 
 
     render() {
-        console.log('productlist.js render')
+        console.log('productList.js render')
 
         return (
             <div>

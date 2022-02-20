@@ -5,7 +5,6 @@ import { BiTrash } from "react-icons/bi";
 
 const Product = ({ onDelete, onIncrement, onDecrement, onChange, product }) => {
     console.log('product.js render')
-    // cdm +cdu+cwum => useEffect !
 
     useEffect(()=>{
         console.log("product.js useEffect")
