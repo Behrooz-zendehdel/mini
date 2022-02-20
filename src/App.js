@@ -71,12 +71,12 @@ class App extends Component {
 
 
     render() {
-        // console.log('app.js render')
         return (
 
 
 
-            <Wrapper class="container">
+            <>
+
 
                 <Navbar totalItems={this.state.products.filter((p) => p.quantity > 0).length} />
                 <ProductList products={this.state.products}
@@ -85,14 +85,14 @@ class App extends Component {
                     onDecrement={this.decrementHandler}
                 />
 
-            </Wrapper>
+            </>
 
         )
     }
 
 };
 
-export default App;
+export default Wrapper(App, "container");
 
 
 

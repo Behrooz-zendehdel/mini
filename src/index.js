@@ -9,4 +9,4 @@ React.createElement('div', { id: 'title', className: 'app-title' }, "this is fir
 
 
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<App name="behrooz" />, document.getElementById("root"));
