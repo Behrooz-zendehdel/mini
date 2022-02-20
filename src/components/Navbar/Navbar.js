@@ -1,8 +1,8 @@
 import styles from './Navbar.module.css'
-const Navbar = (props) => {
+const Navbar = ({totalItems}) => {
     return <header className={styles.navbar}>
         <h2>front end shopping</h2>
-        <span>{props.totalItems}</span>
+        <span>{totalItems}</span>
         </header>
 }
  

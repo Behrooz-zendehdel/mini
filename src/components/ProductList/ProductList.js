@@ -10,17 +10,18 @@ class ProductList extends Component {
 
 
     renderProduct = ()=> {
+        const {onRemove,onIncrement,onDecrement,products}=this.props; //destrucering
         if (this.props.products.length === 0)
             return <div>there is no product in cart</div>
 
-        return  this.props.products.map((product, index) => {
+        return  products.map((product, index) => {
 
                 return ( <Product
                 product={product}
                 key={index}
-                onDelete={() => this.props.onRemove(product.id)}
-                onIncrement={() => this.props.onIncrement(product.id)}
-                onDecrement={() => this.props.onDecrement(product.id)}
+                onDelete={() => onRemove(product.id)}
+                onIncrement={() => onIncrement(product.id)}
+                onDecrement={() => onDecrement(product.id)}
                 // quantity={this.props.quantity}
                 />
                 )
