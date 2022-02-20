@@ -3,6 +3,7 @@ import { Component } from 'react';
 import './App.css'
 import ProductList from './components/ProductList/ProductList';
 import Navbar from './components/Navbar/Navbar';
+import ClassCounter from './components/ClassCounter';
 
 class App extends Component {
     constructor(props) {
@@ -19,7 +20,7 @@ class App extends Component {
 
     }
 
-    changeHandler =(e,id)=>{
+    changeHandler = (e, id) => {
         const index = this.state.products.findIndex((item) => item.id === id);
         const product = { ...this.state.products[index] }
         product.title = e.target.value;
@@ -46,10 +47,10 @@ class App extends Component {
     decrementHandler = (id) => {
         const index = this.state.products.findIndex((item) => item.id === id);
         const product = { ...this.state.products[index] }
-        if(product.quantity ===1){
+        if (product.quantity === 1) {
             const filteredProducts = this.state.products.filter((p) => p.id !== id);
-            this.setState({products:filteredProducts})
-        }else{
+            this.setState({ products: filteredProducts })
+        } else {
             const products = [...this.state.products];
             product.quantity--;
 
@@ -58,16 +59,17 @@ class App extends Component {
         }
 
 
-       
+
 
     }
 
-  
+
 
     render() {
         // console.log('app.js render')
         return (
             <div className="container" id="title">
+                <ClassCounter />
                 {/* <Navbar totalItems={this.state.products.filter((p) => p.quantity > 0).length} />
                 <ProductList products={this.state.products}
                     onRemove={this.removeHandler}
