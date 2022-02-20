@@ -1,6 +1,7 @@
 
 import { Component } from 'react';
 import './App.css'
+import ClassTimer from './components/ClassTimer';
 import FunctionalCounter from './components/FunctionalCounter';
 // import ProductList from './components/ProductList/ProductList';
 // import Navbar from './components/Navbar/Navbar';
@@ -18,6 +19,7 @@ class App extends Component {
             { title: "node.js", price: "89$", id: 2, quantity: 2 },
             { title: "javascript", price: "79$", id: 3, quantity: 3 },
         ],
+        isShow:true,
 
     }
 
@@ -70,7 +72,13 @@ class App extends Component {
         // console.log('app.js render')
         return (
             <div className="container" id="title">
-                <FunctionalCounter />
+                <button onClick={()=>this.setState({isShow :!this.state.isShow})}>
+                {this.state.isShow ? 'hide' : 'show'}
+                </button>
+               
+                {this.state.isShow ? <ClassTimer /> :null}
+                {/* <FunctionalCounter /> */}
+
                 {/* <ClassCounter /> */}
 
                 {/* <Navbar totalItems={this.state.products.filter((p) => p.quantity > 0).length} />
