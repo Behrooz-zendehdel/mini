@@ -2,7 +2,7 @@
 import { Component } from 'react';
 import './App.css'
 import Wrapper from './components/hoc/Wrapper';
-import ClassRef from './components/PureMemoComp/ClassRef';
+import ClassRef from './components/ref/ClassRef';
 import MemoComp from './components/PureMemoComp/MemoComp';
 import ParentComp from './components/PureMemoComp/ParentComp';
 // import ClassCounter from './components/ClassCounter';
