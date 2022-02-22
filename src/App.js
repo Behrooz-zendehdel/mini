@@ -1,15 +1,16 @@
 
 import { Component } from 'react';
 import './App.css'
-import ClassTimer from './components/ClassTimer';
-import FunctionalCounter from './components/FunctionalCounter';
-import FunctionalTimer from './components/FunctionalTimer';
-import ProductList from './components/ProductList/ProductList';
-import Navbar from './components/Navbar/Navbar';
 import Wrapper from './components/hoc/Wrapper';
-import ClickCounter from './components/hocExample/ClickCounter';
-import HoverCounter from './components/hocExample/HoverCounter';
+import ParentComp from './components/PureMemoComp/ParentComp';
 // import ClassCounter from './components/ClassCounter';
+// import ClassTimer from './components/ClassTimer';
+// import FunctionalTimer from './components/FunctionalTimer';
+// import FunctionalCounter from './components/FunctionalCounter';
+// import ProductList from './components/ProductList/ProductList';
+// import Navbar from './components/Navbar/Navbar';
+// import ClickCounter from './components/hocExample/ClickCounter';
+// import HoverCounter from './components/hocExample/HoverCounter';
 
 class App extends Component {
     constructor(props) {
@@ -78,9 +79,8 @@ class App extends Component {
 
 
             <>
+                <ParentComp />
 
-                <ClickCounter  name="behrooz"/>
-                <HoverCounter />
                 {/* <Navbar totalItems={this.state.products.filter((p) => p.quantity > 0).length} />
                 <ProductList products={this.state.products}
                     onRemove={this.removeHandler}
