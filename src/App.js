@@ -2,7 +2,8 @@
 import { Component } from 'react';
 import './App.css'
 import Wrapper from './components/hoc/Wrapper';
-import MemoComp from './components/ProductList/MemoComp';
+import ClassRef from './components/PureMemoComp/ClassRef';
+import MemoComp from './components/PureMemoComp/MemoComp';
 import ParentComp from './components/PureMemoComp/ParentComp';
 // import ClassCounter from './components/ClassCounter';
 // import ClassTimer from './components/ClassTimer';
@@ -80,8 +81,9 @@ class App extends Component {
 
 
             <>
-                <ParentComp />
-                <MemoComp name="behrooz"/>
+                {/* <ParentComp /> */}
+                {/* <MemoComp name="behrooz"/> */}
+                <ClassRef />
                 {/* <Navbar totalItems={this.state.products.filter((p) => p.quantity > 0).length} />
                 <ProductList products={this.state.products}
                     onRemove={this.removeHandler}
