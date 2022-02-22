@@ -17,7 +17,7 @@ class ParentComp extends PureComponent {
             <div>
                 parentComponent
                 <RegComp name={this.state.name} />
-                <PureComp name={this.state.name} />
+                {/* <PureComp name={this.state.name} /> */}
             </div>
         );
     }
