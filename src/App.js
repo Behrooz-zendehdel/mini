@@ -1,8 +1,17 @@
 
-import { Component } from 'react';
+import React, { Component, createContext } from 'react';
 import './App.css'
 import Wrapper from './components/hoc/Wrapper';
-import UseRefExample from './components/ref/UseRefExample'
+import Navbar from './components/Navbar/Navbar'
+import ProductList from './components/ProductList/ProductList'
+
+//create context
+//export context
+//provider
+//usecontext => consum 
+
+export const UserContext = React.createContext();
+export const WebsiteContext = React.createContext();
 
 
 class App extends Component {
@@ -72,17 +81,16 @@ class App extends Component {
 
 
             <>
-
-
-
-                <UseRefExample />
-
-                {/* <Navbar totalItems={this.state.products.filter((p) => p.quantity > 0).length} />
-                <ProductList products={this.state.products}
-                    onRemove={this.removeHandler}
-                    onIncrement={this.incrementHandler}
-                    onDecrement={this.decrementHandler}
-                /> */}
+                <WebsiteContext.Provider value="frontend">
+                    <UserContext.Provider value="behrooz">
+                        <Navbar totalItems={this.state.products.filter((p) => p.quantity > 0).length} />
+                        <ProductList products={this.state.products}
+                            onRemove={this.removeHandler}
+                            onIncrement={this.incrementHandler}
+                            onDecrement={this.decrementHandler}
+                        />
+                    </UserContext.Provider>
+                </WebsiteContext.Provider>
 
             </>
 
