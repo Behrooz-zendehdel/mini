@@ -1,21 +1,20 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import styles from './Product.module.css'
 
 import { BiTrash } from "react-icons/bi";
-import { UserContext, WebsiteContext } from "../../App"
 
 
 
 const Product = ({ onDelete, onIncrement, onDecrement, onChange, product }) => {
-    console.log('product.js render')
 
     useEffect(() => {
         console.log("product.js useEffect")
     }, []);
 
-    const user = useContext(UserContext);
-    const webSite = useContext(WebsiteContext)
-    console.log(user,webSite)
+
+   
+
+
     return (
         <div className={styles.product} >
             {/* onClick={click} */}
