@@ -1,11 +1,11 @@
 
 import React, { Component } from 'react';
 import './App.css';
+import CounterProvider from './components/Context/CounterProvider';
 import Wrapper from './components/hoc/Wrapper';
 // import Navbar from './components/Navbar/Navbar';
 // import ProductList from './components/ProductList/ProductList';
-import CounterProvider from './components/Context/CounterProvider';
-import CounterOne from './components/Context/CounterOne';
+import CounterOne from './components/Context/CounterOne'
 
 
 
@@ -75,9 +75,10 @@ class App extends Component {
         return (
             <>
                 <CounterProvider>
-                    <p>welcome  to site</p>
+                    <p>wellcome to Context</p>
                     <CounterOne />
                 </CounterProvider>
+
                 {/* <Navbar totalItems={this.state.products.filter((p) => p.quantity > 0).length} />
                 <ProductList products={this.state.products}
                     onRemove={this.removeHandler}
