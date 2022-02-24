@@ -1,9 +1,14 @@
 
 import React, { Component } from 'react';
 import './App.css';
+import CounterProvider from './components/context/CounterProvider';
 import Wrapper from './components/hoc/Wrapper';
 import Navbar from './components/Navbar/Navbar';
 import ProductList from './components/ProductList/ProductList';
+import CounterOne from './components/context/CounterOne';
+
+
+
 
 class App extends Component {
     constructor(props) {
@@ -68,30 +73,21 @@ class App extends Component {
 
     render() {
         return (
-
-
-
             <>
-              
-
-
-                {/* 
-                <Navbar totalItems={this.state.products.filter((p) => p.quantity > 0).length} />
+                <CounterProvider>
+                    <p>wellcome behrooz to site</p>
+                    <CounterOne />
+                </CounterProvider>
+                {/* <Navbar totalItems={this.state.products.filter((p) => p.quantity > 0).length} />
                 <ProductList products={this.state.products}
                     onRemove={this.removeHandler}
                     onIncrement={this.incrementHandler}
                     onDecrement={this.decrementHandler}
-                />
-            */}
-
-
+                /> */}
             </>
-
         )
     }
-
 };
-
 export default Wrapper(App, "container");
 
 

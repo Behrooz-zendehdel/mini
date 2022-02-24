@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react';
+import React, {  useEffect } from 'react';
 import styles from './Product.module.css'
 
 import { BiTrash } from "react-icons/bi";
-
 
 
 const Product = ({ onDelete, onIncrement, onDecrement, onChange, product }) => {
@@ -12,7 +11,6 @@ const Product = ({ onDelete, onIncrement, onDecrement, onChange, product }) => {
     }, []);
 
 
-   
 
 
     return (
