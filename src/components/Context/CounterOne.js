@@ -1,14 +1,25 @@
-import { useContext } from 'react';
-import { CounterContext, CounterCountDispatcher } from './CounterProvider'
+import { useCount, useCountActions } from './CounterProvider'
+
+
 const CounterOne = () => {
-    const count = useContext(CounterContext);
-    const setCount = useContext(CounterCountDispatcher);
+    const count = useCount();
+    const { addOne, addFive,decrement } = useCountActions();
+
+
+    // const addOne = () => {
+    //     setCount((prevCount) => prevCount + 1)
+    // }
+    // const addFive = () => {
+    //     setCount((prevCount) => prevCount + 5)
+    // }
     return (
         <div>
             <h2>count is : {count}</h2>
-            <button onClick={() => setCount(count + 1)}>add one</button>
+            <button onClick={addOne}>add one</button>
+            <button onClick={addFive}>add Five</button>
+            <button onClick={decrement}>decrement</button>
         </div>
     );
-    }
+}
 
-  export default CounterOne;
+export default CounterOne;
