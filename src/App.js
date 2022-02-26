@@ -6,6 +6,7 @@ import Wrapper from './components/hoc/Wrapper';
 // import Navbar from './components/Navbar/Navbar';
 // import ProductList from './components/ProductList/ProductList';
 import CounterOne from './components/Context/CounterOne'
+import CountReducer from './components/Reducer/CountReducer';
 
 
 
@@ -76,7 +77,7 @@ class App extends Component {
             <>
                 <CounterProvider>
                     <p>wellcome to Context</p>
-                    <CounterOne />
+                    <CountReducer />
                 </CounterProvider>
 
                 {/* <Navbar totalItems={this.state.products.filter((p) => p.quantity > 0).length} />
