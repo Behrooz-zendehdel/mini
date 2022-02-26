@@ -1,11 +1,16 @@
+import { useProducts } from '../../Providers/ProductsProvider';
 import styles from './Navbar.module.css'
-const Navbar = ({totalItems}) => {
-    console.log('navbar.js render')
+const Navbar = () => {
 
-    return <header className={styles.navbar}>
+    const products = useProducts()
+    const totalItems = products.filter((p)=> p.quantity > 0 ).length;
+
+    return (
+    <header className={styles.navbar}>
         <h2>front end shopping</h2>
         <span>{totalItems}</span>
-        </header>
+    </header>
+    )
 }
- 
+
 export default Navbar;

@@ -1,20 +1,15 @@
 import { useReducer, useState } from "react";
 
-const initialState = {
-    firstCounter: 0,
-    secondCounter: 0,
-};
+const initialState = 0;
+
 const reducer = (state, action) => {
     console.log(state, action)
     switch (action.type) {
-        case 'addOne':
-            return { ...state, firstCounter: state.firstCounter + action.value };
+        case 'add':
+            return state + action.value;
         case 'decrement':
-            return { ...state, firstCounter: state.firstCounter - action.value };
-        case 'addOne2':
-            return { ...state, secondCounter: state.secondCounter + action.value };
-        case 'decrement2':
-            return { ...state, secondCounter: state.secondCounter - action.value };
+            return state - action.value;
+
         case 'reset':
             return initialState;
         default:
@@ -34,24 +29,25 @@ const CountReducer = () => {
     //3.return : [count , dispatch]
     //4.reducer(state,action)
     const [count, dispatch] = useReducer(reducer, initialState);
+    const [countTwo, dispatchTwo] = useReducer(reducer, initialState);
 
     return (
 
         <div>
-            <h2>count : {count.firstCounter}</h2>
-            <h2>count : {count.secondCounter}</h2>
             <div>
-                <button onClick={() => dispatch({ type: "addOne", value: 1 })}>add one</button>
-                <button onClick={() => dispatch({ type: "addOne", value: 5 })}>add Five</button>
+                <h2>count : {count}</h2>
+                <button onClick={() => dispatch({ type: "add", value: 1 })}>add one</button>
                 <button onClick={() => dispatch({ type: "decrement", value: 1 })}>decrement</button>
+            <button onClick={() => dispatch({ type: "reset" })}>reset</button>
 
             </div>
             <div>
-                <button onClick={() => dispatch({ type: "addOne2", value: 2 })}>add Two</button>
-                <button onClick={() => dispatch({ type: "addOne2", value: 5 })}>add Five</button>
-                <button onClick={() => dispatch({ type: "decrement2", value: 2 })}>decrement Two</button>
+                <h2>count : {countTwo}</h2>
+                <button onClick={() => dispatchTwo({ type: "add", value: 2 })}>add Two</button>
+                <button onClick={() => dispatchTwo({ type: "decrement", value: 2 })}>decrement Two</button>
+                <button onClick={() => dispatchTwo({ type: "reset" })}>reset</button>
+
             </div>
-            <button onClick={() => dispatch({ type: "reset" })}>reset</button>
         </div>
     );
 }
