@@ -1,4 +1,4 @@
-export const productsData =
+export const mahsol =
     [
         {
 
@@ -100,67 +100,5 @@ export const productsData =
             "title": "vero rerum temporibus dolor",
             "price": "$ 43.1"
         },
-        {
-
-            "userId": 1,
-            "quantity": 1,
-            "availableSize": ["X", "L", "XL"],
-            "id": 12,
-            "title": "ipsa repellendus fugit nisi",
-            "price": "$ 122.1"
-        },
-        {
-
-            "userId": 1,
-            "quantity": 1,
-            "availableSize": ["XXL"],
-            "id": 13,
-            "title": "et doloremque nulla",
-            "price": "$ 2.1"
-        },
-        {
-
-            "userId": 1,
-            "quantity": 1,
-            "availableSize": ["XXL"],
-            "id": 14,
-            "title": "repellendus sunt dolores architecto voluptatum",
-            "price": "$430.1"
-        },
-        {
-
-            "userId": 1,
-            "quantity": 1,
-            "availableSize": ["X", "L"],
-            "id": 15,
-            "title": "ab voluptatum amet voluptas",
-            "price": "$ 10.1"
-        },
-        {
-
-            "userId": 1,
-            "quantity": 1,
-            "availableSize": ["XL", "XXL"],
-            "id": 16,
-            "title": "accusamus eos facilis sint et aut voluptatem",
-            "price": "$ 10.1"
-        },
-        {
-
-            "userId": 1,
-            "quantity": 1,
-            "availableSize": ["X", "L", "XL", "XXL"],
-            "id": 17,
-            "title": "quo laboriosam deleniti aut qui",
-            "price": "$ 22.1"
-        },
-        {
-
-            "userId": 1,
-            "quantity": 1,
-            "availableSize": ["X", "L", "XL", "XXL"],
-            "id": 18,
-            "title": "dolorum est consequatur ea mollitia in culpa",
-            "price": "$ 11.1"
-        }
+        
     ]

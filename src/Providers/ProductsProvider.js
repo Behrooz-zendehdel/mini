@@ -1,7 +1,6 @@
-import React, { useReducer, useState } from 'react';
+import React, { useReducer } from 'react';
 import { useContext } from 'react';
-import { productsData } from '../Providers/db/Products'
-
+import { mahsol } from './db/products'
 const ProcductContext = React.createContext();
 const ProcductContextDispatcher = React.createContext();
 // const initialState = [
@@ -54,6 +53,11 @@ const reducer = (state, action) => {
             const filteredProduct = state.filter((p) => p.id !== action.id);
 
             return filteredProduct;
+        case 'filter':
+            console.log(action.event.target.value)
+            return state;
+
+
         default:
             return state;
     }
@@ -61,7 +65,7 @@ const reducer = (state, action) => {
 }
 const ProductsProvider = ({ children }) => {
 
-    const [products, dispatch] = useReducer(reducer, productsData)
+    const [products, dispatch] = useReducer(reducer, mahsol)
 
 
     return (

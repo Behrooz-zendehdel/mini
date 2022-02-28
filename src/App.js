@@ -5,8 +5,7 @@ import Wrapper from './components/hoc/Wrapper';
 import Navbar from './components/Navbar/Navbar';
 import ProductList from './components/ProductList/ProductList';
 import ProductsProvider from './Providers/ProductsProvider'
-import Filter from './components/Filter/Filter';
-
+import Filter from './components/Filter/Filter'
 
 
 
