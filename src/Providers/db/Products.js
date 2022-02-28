@@ -13,7 +13,7 @@ export const productsData =
             title: "man tie",
             quantity: 1,
             descreiption: "man hastam", availablesSize: ["S", "M", "L", "XXL"],
-            price: 49.9,
+            price: 100.9,
             isFreeShipping: false
         },
         {
@@ -22,7 +22,7 @@ export const productsData =
             quantity: 1,
             descreiption: "man hastam",
              availablesSize: ["XS", "XL", "XXL"],
-            price: 49.9,
+            price: 10.9,
             isFreeShipping: false
         },
         {
@@ -30,7 +30,7 @@ export const productsData =
             title: "man tie",
             quantity: 1,
             descreiption: "man hastam", availablesSize: ["S"],
-            price: 49.9,
+            price: 20.9,
             isFreeShipping: false
         },
         {
@@ -38,7 +38,7 @@ export const productsData =
             title: "man tie",
             quantity: 1,
             descreiption: "man hastam", availablesSize: ["XXL"],
-            price: 49.9,
+            price: 30.9,
             isFreeShipping: false
         },
         {
@@ -46,7 +46,7 @@ export const productsData =
             title: "man tie",
             quantity: 1,
             descreiption: "man hastam", availablesSize: ["S", "M", "L", "XS", "XXL"],
-            price: 49.9,
+            price: 35.9,
             isFreeShipping: false
         },
         {
@@ -54,7 +54,7 @@ export const productsData =
             title: "man tie",
             quantity: 1,
             descreiption: "man hastam", availablesSize: ["S", "L", "XS", "XL", "XXL"],
-            price: 49.9,
+            price: 37.9,
             isFreeShipping: false
         },
         {
@@ -62,7 +62,7 @@ export const productsData =
             title: "man tie",
             quantity: 1,
             descreiption: "man hastam", availablesSize: ["M", "L", "XS", "XL", "XXL"],
-            price: 49.9,
+            price: 150.9,
             isFreeShipping: false
         },
         {
@@ -70,7 +70,7 @@ export const productsData =
             title: "man tie",
             quantity: 1,
             descreiption: "man hastam", availablesSize: ["S", "XXL"],
-            price: 49.9,
+            price: 200.52,
             isFreeShipping: false
         },
         {
@@ -78,7 +78,7 @@ export const productsData =
             title: "man tie",
             quantity: 1,
             descreiption: "man hastam", availablesSize: ["S", "XS", "XL", "XXL"],
-            price: 49.9,
+            price: 142.2,
             isFreeShipping: false
         },
         {

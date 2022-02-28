@@ -1,6 +1,7 @@
 import React, { useReducer } from 'react';
 import { useContext } from 'react';
 import { productsData } from './db/products'
+import _ from 'lodash';
 
 const ProcductContext = React.createContext();
 const ProcductContextDispatcher = React.createContext();
@@ -63,9 +64,18 @@ const reducer = (state, action) => {
                     return updatedProducts;
                 }
             }
-
-
-        default:
+        case 'sort':
+            
+                const value = action.selectedOption.value;
+                const products = [...state]
+                if (value === "lowest") {
+                    return _.orderBy(products, ['price'],['asc'])
+                    
+                } else {
+                    return _.orderBy(products, ['price'],['desc'])
+                 
+                }
+                   default:
             return state;
     }
 
