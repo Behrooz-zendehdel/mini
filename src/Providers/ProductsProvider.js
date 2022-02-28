@@ -1,13 +1,9 @@
 import React, { useReducer } from 'react';
 import { useContext } from 'react';
-import { mahsol } from './db/products'
+import { productsData } from './db/products'
+
 const ProcductContext = React.createContext();
 const ProcductContextDispatcher = React.createContext();
-// const initialState = [
-//     { title: "react.js", price: "99$", id: 1, quantity: 1 },
-//     { title: "node.js", price: "89$", id: 2, quantity: 2 },
-//     { title: "javascript", price: "79$", id: 3, quantity: 3 },
-// ]
 
 
 const reducer = (state, action) => {
@@ -54,8 +50,18 @@ const reducer = (state, action) => {
 
             return filteredProduct;
         case 'filter':
-            console.log(action.event.target.value)
-            return state;
+            {
+                if (action.event.target.value === "") {
+                    return productsData
+                } else {
+
+                    const updatedProducts = productsData.filter(
+                        (p) => p.availablesSize.indexOf(action.event.target.value) >= 0
+                    )
+
+                    return updatedProducts;
+                }
+            }
 
 
         default:
@@ -65,7 +71,7 @@ const reducer = (state, action) => {
 }
 const ProductsProvider = ({ children }) => {
 
-    const [products, dispatch] = useReducer(reducer, mahsol)
+    const [products, dispatch] = useReducer(reducer, productsData)
 
 
     return (
