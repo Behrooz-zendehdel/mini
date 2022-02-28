@@ -2,6 +2,7 @@ import { useProductsActions } from "../../Providers/ProductsProvider";
 import React, { useState } from 'react';
 import Select from 'react-select';
 import styles from '../Filter/filter.module.css'
+import SelectCompoenent from '../../common/Select/SelectComponent'
 
 const sortOptions = [
     { value: "highest", label: "highest" },
@@ -39,24 +40,24 @@ const Filter = () => {
 
                 <span>order by:</span>
 
-                <Select
+                <SelectCompoenent
+                    title="filter by size"
                     value={value}
                     onChange={changeHandler}
                     options={options}
-                    className={styles.Select}
+
                 />
-            </div>
-            <div className={styles.Container}>
 
-                <span>sort by:</span>
 
-                <Select
-                    value={value}
+                <SelectCompoenent
+                    title="sort by price"
+                    value={sort}
                     onChange={sortHandler}
                     options={sortOptions}
-                    className={styles.Select}
+
                 />
             </div>
+
         </div>
     );
 }
