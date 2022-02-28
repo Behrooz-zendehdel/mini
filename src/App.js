@@ -17,7 +17,7 @@ const App = () => {
         <>
             <ProductsProvider>
                 <Navbar />
-                <SearchBar />
+                {/* <SearchBar /> */}
                 <Filter />
                 <ProductList />
             </ProductsProvider>

@@ -2,7 +2,7 @@ export const productsData =
     [
         {
             id: 1,
-            title: "man tie",
+            title: "behrooz zendedel 1992 @ g",
             quantity: 1,
             descreiption: "man hastam", availablesSize: ["S", "M", "L", "XS"],
             price: 49.9,
@@ -10,7 +10,7 @@ export const productsData =
         },
         {
             id: 2,
-            title: "man tie",
+            title: "behrooz zendedel 199 gmail",
             quantity: 1,
             descreiption: "man hastam", availablesSize: ["S", "M", "L", "XXL"],
             price: 100.9,
@@ -18,7 +18,7 @@ export const productsData =
         },
         {
             id: 3,
-            title: "man tie",
+            title: "behrooz zended1992 @ gmail",
             quantity: 1,
             descreiption: "man hastam",
              availablesSize: ["XS", "XL", "XXL"],
@@ -27,7 +27,7 @@ export const productsData =
         },
         {
             id: 4,
-            title: "man tie",
+            title: "behrozendedel 1992 @ gmail",
             quantity: 1,
             descreiption: "man hastam", availablesSize: ["S"],
             price: 20.9,
@@ -35,7 +35,7 @@ export const productsData =
         },
         {
             id: 5,
-            title: "man tie",
+            title: "be zendedel 1992 @ gmail",
             quantity: 1,
             descreiption: "man hastam", availablesSize: ["XXL"],
             price: 30.9,
@@ -43,7 +43,7 @@ export const productsData =
         },
         {
             id: 6,
-            title: "man tie",
+            title: "behrooz zeel 1992 @ gmail",
             quantity: 1,
             descreiption: "man hastam", availablesSize: ["S", "M", "L", "XS", "XXL"],
             price: 35.9,
@@ -51,7 +51,7 @@ export const productsData =
         },
         {
             id: 7,
-            title: "man tie",
+            title: "behrooz zendedel",
             quantity: 1,
             descreiption: "man hastam", availablesSize: ["S", "L", "XS", "XL", "XXL"],
             price: 37.9,
@@ -59,7 +59,7 @@ export const productsData =
         },
         {
             id: 8,
-            title: "man tie",
+            title: "behroel 1992 @ gmail",
             quantity: 1,
             descreiption: "man hastam", availablesSize: ["M", "L", "XS", "XL", "XXL"],
             price: 150.9,
@@ -67,7 +67,7 @@ export const productsData =
         },
         {
             id: 9,
-            title: "man tie",
+            title: "behrooz ze",
             quantity: 1,
             descreiption: "man hastam", availablesSize: ["S", "XXL"],
             price: 200.52,
@@ -75,15 +75,15 @@ export const productsData =
         },
         {
             id: 10,
-            title: "man tie",
+            title: "l 1992 @ gmail",
             quantity: 1,
             descreiption: "man hastam", availablesSize: ["S", "XS", "XL", "XXL"],
-            price: 142.2,
+            price: 142,
             isFreeShipping: false
         },
         {
             id: 11,
-            title: "man tie",
+            title: "behrooz zended gmail",
             quantity: 1,
             descreiption: "man hastam", availablesSize: ["XL", "XXL"],
             price: 49.9,

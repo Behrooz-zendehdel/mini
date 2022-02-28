@@ -65,17 +65,29 @@ const reducer = (state, action) => {
                 }
             }
         case 'sort':
-            
-                const value = action.selectedOption.value;
-                const products = [...state]
-                if (value === "lowest") {
-                    return _.orderBy(products, ['price'],['asc'])
-                    
-                } else {
-                    return _.orderBy(products, ['price'],['desc'])
-                 
-                }
-                   default:
+
+            const value = action.selectedOption.value;
+            const products = [...state]
+            if (value === "lowest") {
+                return _.orderBy(products, ['price'], ['asc'])
+
+            } else {
+                return _.orderBy(products, ['price'], ['desc'])
+
+            }
+        case 'search': {
+            const value = action.event.target.value;
+            if (value === "") {
+                return state;
+ 
+            } else {
+                const filteredProducts = state.filter((p) =>
+                    p.title.toLowerCase().includes(value.toLowerCase())
+                );
+                return filteredProducts;
+            }
+        }
+        default:
             return state;
     }
 

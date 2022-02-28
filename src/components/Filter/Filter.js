@@ -3,13 +3,14 @@ import React, { useState } from 'react';
 import Select from 'react-select';
 import styles from '../Filter/filter.module.css'
 import SelectCompoenent from '../../common/Select/SelectComponent'
+import SearchBar from "../../common/search/Search";
 
 const sortOptions = [
     { value: "highest", label: "highest" },
     { value: "lowest", label: "lowest" },
 
 ]
-const options = [
+const filterOptions = [
     { value: "", label: "All" },
     { value: "Xs", label: "Xs" },
     { value: "S", label: "S" },
@@ -21,34 +22,30 @@ const options = [
 
 const Filter = () => {
     const dispatch = useProductsActions();
-    const [value, setValue] = useState("");
+    const [filter, setFilter] = useState("");
     const [sort, setSort] = useState("");
 
+
+    const filterHandler = (selectedOption) => {
+        dispatch({ type: "filter", selectedOption })
+        dispatch({ type: "sort", selectedOption: sort })
+        setFilter(selectedOption)
+    }
     const sortHandler = (selectedOption) => {
         dispatch({ type: "sort", selectedOption })
         setSort(selectedOption)
     }
-    const changeHandler = (selectedOption) => {
-        dispatch({ type: "filter", selectedOption })
-        dispatch({ type: "sort", selectedOption: sort })
-        setValue(selectedOption)
-    }
     return (
-        <div className={styles.filter}>
-            <p>filter product </p>
-            <div className={styles.Container}>
-
-                <span>order by:</span>
-
+        <section>
+            <SearchBar filter={filter} />
+            <div className={styles.filter}>
+                <p>filter product </p>
                 <SelectCompoenent
                     title="filter by size"
-                    value={value}
-                    onChange={changeHandler}
-                    options={options}
-
+                    value={filter}
+                    onChange={filterHandler}
+                    options={filterOptions}
                 />
-
-
                 <SelectCompoenent
                     title="sort by price"
                     value={sort}
@@ -57,8 +54,9 @@ const Filter = () => {
 
                 />
             </div>
+        </section>
 
-        </div>
+
     );
 }
 
