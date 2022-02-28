@@ -51,12 +51,13 @@ const reducer = (state, action) => {
             return filteredProduct;
         case 'filter':
             {
-                if (action.event.target.value === "") {
+                const value = action.selectedOption.value
+                if (value === "") {
                     return productsData
                 } else {
 
                     const updatedProducts = productsData.filter(
-                        (p) => p.availablesSize.indexOf(action.event.target.value) >= 0
+                        (p) => p.availablesSize.indexOf(value) >= 0
                     )
 
                     return updatedProducts;
